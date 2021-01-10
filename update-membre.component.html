@@ -1,0 +1,40 @@
+<div class="container">
+    <div>
+        <h2>Modifier les données d'un membre</h2>
+    </div>
+    <form action="" method="post">
+        
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label for="">Code de membre</label>
+            <input type="text" [(ngModel)]="currentMembre.id" name="id" class="form-control">
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label for="">Nom Membre</label>
+            <input type="text" [(ngModel)]="currentMembre.nomMembre" name="Nom" class="form-control">
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label for="">Prénom Membre</label>
+            <input type="text" [(ngModel)]="currentMembre.prenomMembre" name="Prenom" class="form-control">
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label for="">Département</label>
+            <input type="text" [(ngModel)]="currentMembre.departement" name="departement" class="form-control">
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label for="">Nom Membre</label>
+            <input type="date" [(ngModel)]="currentMembre.dateAjout" name="date" (ngModelChange)="currentMembre.dateAjout= $event" class="form-control">
+        </div>
+
+        <div class="mt-2">
+            <button type="submit" (click)="updateMembre()" class="btn btn-success">Modifier</button>
+            <div>
+            
+            </div>
+        </div>
+
+    </form>
+</div>

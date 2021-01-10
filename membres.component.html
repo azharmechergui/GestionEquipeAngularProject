@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Code de membre</th>
+                        <th>Nom de membre</th>
+                        <th>Prénom de membre</th>
+                        <th>Département de membre</th>
+                        <th>Date d'ajout</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let membre of membres">
+                    <tr>
+                        <td>{{membre.id}}</td>
+                        <td>{{membre.nomMembre}}</td>
+                        <td>{{membre.prenomMembre}}</td>
+                        <td>{{membre.departement}}</td>
+                        <td>{{membre.dateAjout | date:'dd/MM/yyyy'}}</td>
+                        <td><a class="btn btn-danger" (click)="supprimerProduit(membre)">Supprimer</a></td>
+                        <td><a [routerLink]="['/updateMembre',membre.id]" class="btn btn-success">Modifier</a></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

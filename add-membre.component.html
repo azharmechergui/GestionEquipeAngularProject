@@ -1,0 +1,38 @@
+<div class="container">
+  <div>
+    <h2>Ajouter un nouveau membre :</h2>
+  </div>
+</div>
+<form action="" method="post">
+  <div class="col-sm-2 col-md col-lg-2">
+    <label for="">Code Membre</label>
+    <input type="number" [(ngModel)]="newMembre.id" name="idMembre" class="form-control">
+  </div>
+
+  <div class="col-sm-4 col-lg-4">
+    <label for="">Nom Membre</label>
+    <input type="text" [(ngModel)]="newMembre.nomMembre" name="nomMembre" class="form-control">
+  </div>
+
+  <div class="col-sm-4 col-lg-4">
+    <label for="">Prénom Membre</label>
+    <input type="text" [(ngModel)]="newMembre.prenomMembre" name="prenomMembre" class="form-control">
+  </div>
+
+  <div class="col-sm-2 col-md-4 col-lg-4">
+    <label for="">Département</label>
+    <input type="text" [(ngModel)]="newMembre.departement" name="departement" class="form-control">
+  </div>
+
+  <div class="col-sm-4 col-lg-4">
+    <label for="">Dated'ajout</label>
+    <input type="date" [(ngModel)]="newMembre.dateAjout" name="dateAjout" class="form-control">
+  </div>
+
+  <div class="mt-2">
+    <button type="submit" (click)="addMembre()" class="btn btn-success">Ajouter</button>
+    <div>
+      <h3>{{ message }}</h3>
+    </div>
+  </div>
+</form>
